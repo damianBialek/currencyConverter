@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using currentlyConverter.Http;
+using System.IO;
 
 namespace currentlyConverter
 {
@@ -15,6 +17,8 @@ namespace currentlyConverter
         public Form1()
         {
             InitializeComponent();
+
+            string test = new HttpRequest().httpRequest("http://api.nbp.pl/api/exchangerates/rates/a/chf/");
         }
     }
 }

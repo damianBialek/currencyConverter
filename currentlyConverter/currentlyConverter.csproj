@@ -52,6 +52,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Http\HttpRequest.cs" />
+    <Compile Include="Nbp\NbpData.cs" />
+    <Compile Include="Nbp\NbpXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

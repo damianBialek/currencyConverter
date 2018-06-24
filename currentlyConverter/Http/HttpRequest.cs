@@ -11,12 +11,13 @@ namespace currentlyConverter.Http
 {
     class HttpRequest
     {
-        public string httpRequest(string url)
+        public static Stream httpRequest(string url)
         {
             HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("Accept", "application/xml");
 
-            return client.GetStringAsync(url).Result;
+            return client.GetStreamAsync(url).Result;
         }
+
     }
 }

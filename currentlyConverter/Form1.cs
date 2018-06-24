@@ -9,16 +9,52 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using currentlyConverter.Http;
 using System.IO;
+using currentlyConverter.Nbp;
 
 namespace currentlyConverter
 {
     public partial class Form1 : Form
     {
+        NbpData nbp;
+        List<NbpTableRates> nbpRates;
+
         public Form1()
         {
             InitializeComponent();
 
-            string test = new HttpRequest().httpRequest("http://api.nbp.pl/api/exchangerates/rates/a/chf/");
+            this.nbp = new NbpData();
+            this.nbpRates = nbp.getAvailableRates();
+            this.addPlnToRates();
+
+            this.completeComboBoxes();
+        }
+
+        public void addPlnToRates()
+        {
+            NbpTableRate pln = new NbpTableRate();
+            pln.Code = "PLN";
+            pln.Currency = "Polish zloty";
+            pln.Mid = 1;
+
+            this.nbpRates.Add(pln);
+        }
+
+        public void completeComboBoxes()
+        {
+            foreach (NbpTableRate rate in nbpRates)
+            {
+                this.fromCurrentylComboBox.Items.Add(rate);
+                this.toCurrentlyComboBox.Items.Add(rate);
+            }
+
+            this.fromCurrentylComboBox.SelectedItem = this.fromCurrentylComboBox.Items[this.fromCurrentylComboBox.Items.Count - 1];
+            this.toCurrentlyComboBox.SelectedItem = this.toCurrentlyComboBox.Items[0];
+
+
+            this.fromCurrentylComboBox.DisplayMember = "Currency";
+            this.fromCurrentylComboBox.ValueMember = "Code";
+            this.toCurrentlyComboBox.DisplayMember = "Currency";
+            this.toCurrentlyComboBox.ValueMember = "Code";
         }
     }
 }

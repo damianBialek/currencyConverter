@@ -65,12 +65,9 @@ namespace currentlyConverter
                 NbpTableRate fromCurrency = this.findCurrency(((NbpTableRate)this.fromCurrentylComboBox.SelectedItem).Code);
                 NbpTableRate toCurrency = this.findCurrency(((NbpTableRate)this.toCurrentlyComboBox.SelectedItem).Code);
 
-                if (fromCurrency.Code.Equals("PLN"))
-                {
-                    double convertedAmount = amount / toCurrency.Mid;
+                double convertedAmount = Calculator.calculate(amount, fromCurrency, toCurrency);
 
-                    convertedValueLabel.Text = String.Format("{0:0.00}", convertedAmount);
-                }
+                convertedValueLabel.Text = String.Format("{0:0.00}", convertedAmount);
             }
             else
             {

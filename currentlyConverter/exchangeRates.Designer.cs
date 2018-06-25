@@ -36,14 +36,14 @@
             this.exchangeRatesPanel.AutoScroll = true;
             this.exchangeRatesPanel.Location = new System.Drawing.Point(0, 0);
             this.exchangeRatesPanel.Name = "exchangeRatesPanel";
-            this.exchangeRatesPanel.Size = new System.Drawing.Size(216, 486);
+            this.exchangeRatesPanel.Size = new System.Drawing.Size(212, 486);
             this.exchangeRatesPanel.TabIndex = 0;
             // 
             // exchangeRates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(216, 483);
+            this.ClientSize = new System.Drawing.Size(222, 483);
             this.Controls.Add(this.exchangeRatesPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "exchangeRates";

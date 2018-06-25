@@ -51,10 +51,61 @@ namespace currentlyConverter
             this.toCurrentlyComboBox.SelectedItem = this.toCurrentlyComboBox.Items[0];
 
 
-            this.fromCurrentylComboBox.DisplayMember = "Currency";
+            this.fromCurrentylComboBox.DisplayMember = "Code";
             this.fromCurrentylComboBox.ValueMember = "Code";
-            this.toCurrentlyComboBox.DisplayMember = "Currency";
+            this.toCurrentlyComboBox.DisplayMember = "Code";
             this.toCurrentlyComboBox.ValueMember = "Code";
+        }
+
+        private void convertButton_Click(object sender, EventArgs e)
+        {
+            double amount;
+            if(double.TryParse(inputValueTextBox.Text, out amount))
+            {
+                NbpTableRate fromCurrency = this.findCurrency(((NbpTableRate)this.fromCurrentylComboBox.SelectedItem).Code);
+                NbpTableRate toCurrency = this.findCurrency(((NbpTableRate)this.toCurrentlyComboBox.SelectedItem).Code);
+
+                if (fromCurrency.Code.Equals("PLN"))
+                {
+                    double convertedAmount = amount / toCurrency.Mid;
+
+                    convertedValueLabel.Text = String.Format("{0:0.00}", convertedAmount);
+                }
+            }
+            else
+            {
+                MessageBox.Show("You input bad value", "Error input value");
+            }
+        }
+
+        private NbpTableRate findCurrency(string code)
+        {
+            NbpTableRate foundRate = null;
+
+            foreach (NbpTableRate rate in nbpRates)
+            {
+                if (rate.Code.Equals(code))
+                    foundRate = rate;
+            }
+
+            return foundRate;
+        }
+
+        private void openAllRatesButton_Click(object sender, EventArgs e)
+        {
+            exchangeRates form = new exchangeRates();
+            form.nbpRates = this.nbpRates;
+            form.renderRates();
+            form.Show(this);
+
+            form.FormClosed += new FormClosedEventHandler(this.activateButton);
+
+            this.openAllRatesButton.Visible = false;
+        }
+
+        private void activateButton(object sender, FormClosedEventArgs e)
+        {
+            this.openAllRatesButton.Visible = true;
         }
     }
 }

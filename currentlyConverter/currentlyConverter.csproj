@@ -45,6 +45,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="currencyRate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="currencyRate.Designer.cs">
+      <DependentUpon>currencyRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="exchangeRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="exchangeRates.Designer.cs">
+      <DependentUpon>exchangeRates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +68,12 @@
     <Compile Include="Nbp\NbpXml.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="currencyRate.resx">
+      <DependentUpon>currencyRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="exchangeRates.resx">
+      <DependentUpon>exchangeRates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -32,51 +32,127 @@
             this.toCurrentlyComboBox = new System.Windows.Forms.ComboBox();
             this.inputValueTextBox = new System.Windows.Forms.TextBox();
             this.convertButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.convertedValueLabel = new System.Windows.Forms.Label();
+            this.openAllRatesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fromCurrentylComboBox
             // 
+            this.fromCurrentylComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.fromCurrentylComboBox.FormattingEnabled = true;
-            this.fromCurrentylComboBox.Location = new System.Drawing.Point(161, 12);
+            this.fromCurrentylComboBox.Location = new System.Drawing.Point(28, 89);
             this.fromCurrentylComboBox.Name = "fromCurrentylComboBox";
-            this.fromCurrentylComboBox.Size = new System.Drawing.Size(121, 21);
-            this.fromCurrentylComboBox.TabIndex = 0;
+            this.fromCurrentylComboBox.Size = new System.Drawing.Size(121, 24);
+            this.fromCurrentylComboBox.TabIndex = 1;
             // 
             // toCurrentlyComboBox
             // 
+            this.toCurrentlyComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.toCurrentlyComboBox.FormattingEnabled = true;
-            this.toCurrentlyComboBox.Location = new System.Drawing.Point(325, 13);
+            this.toCurrentlyComboBox.Location = new System.Drawing.Point(28, 145);
             this.toCurrentlyComboBox.Name = "toCurrentlyComboBox";
-            this.toCurrentlyComboBox.Size = new System.Drawing.Size(121, 21);
+            this.toCurrentlyComboBox.Size = new System.Drawing.Size(121, 24);
             this.toCurrentlyComboBox.TabIndex = 1;
             // 
             // inputValueTextBox
             // 
-            this.inputValueTextBox.Location = new System.Drawing.Point(31, 13);
+            this.inputValueTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.inputValueTextBox.Location = new System.Drawing.Point(28, 34);
             this.inputValueTextBox.Name = "inputValueTextBox";
-            this.inputValueTextBox.Size = new System.Drawing.Size(100, 20);
-            this.inputValueTextBox.TabIndex = 2;
+            this.inputValueTextBox.Size = new System.Drawing.Size(121, 24);
+            this.inputValueTextBox.TabIndex = 0;
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(483, 10);
+            this.convertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.convertButton.Location = new System.Drawing.Point(28, 186);
             this.convertButton.Name = "convertButton";
-            this.convertButton.Size = new System.Drawing.Size(75, 23);
+            this.convertButton.Size = new System.Drawing.Size(121, 30);
             this.convertButton.TabIndex = 3;
             this.convertButton.Text = "Convert";
             this.convertButton.UseVisualStyleBackColor = true;
+            this.convertButton.Click += new System.EventHandler(this.convertButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(60, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Amount";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(69, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "From";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(79, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "To";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.Location = new System.Drawing.Point(65, 227);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Value";
+            // 
+            // convertedValueLabel
+            // 
+            this.convertedValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.convertedValueLabel.Location = new System.Drawing.Point(12, 254);
+            this.convertedValueLabel.Name = "convertedValueLabel";
+            this.convertedValueLabel.Size = new System.Drawing.Size(155, 23);
+            this.convertedValueLabel.TabIndex = 9;
+            this.convertedValueLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // openAllRatesButton
+            // 
+            this.openAllRatesButton.Location = new System.Drawing.Point(171, 34);
+            this.openAllRatesButton.Name = "openAllRatesButton";
+            this.openAllRatesButton.Size = new System.Drawing.Size(75, 23);
+            this.openAllRatesButton.TabIndex = 10;
+            this.openAllRatesButton.Text = "Rates";
+            this.openAllRatesButton.UseVisualStyleBackColor = true;
+            this.openAllRatesButton.Click += new System.EventHandler(this.openAllRatesButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 494);
+            this.ClientSize = new System.Drawing.Size(258, 289);
+            this.Controls.Add(this.openAllRatesButton);
+            this.Controls.Add(this.convertedValueLabel);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.convertButton);
             this.Controls.Add(this.inputValueTextBox);
             this.Controls.Add(this.toCurrentlyComboBox);
             this.Controls.Add(this.fromCurrentylComboBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Currency Converter";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,6 +164,12 @@
         private System.Windows.Forms.ComboBox toCurrentlyComboBox;
         private System.Windows.Forms.TextBox inputValueTextBox;
         private System.Windows.Forms.Button convertButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label convertedValueLabel;
+        private System.Windows.Forms.Button openAllRatesButton;
     }
 }
 

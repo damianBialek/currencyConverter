@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Xml.Serialization;
-using currentlyConverter.Http;
+using currencyConverter.Http;
 
-namespace currentlyConverter.Nbp
+namespace currencyConverter.Nbp
 {
     class NbpData
     {

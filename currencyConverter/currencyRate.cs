@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace currentlyConverter
+namespace currencyConverter
 {
     public partial class currencyRate : UserControl
     {

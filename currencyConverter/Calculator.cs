@@ -1,7 +1,7 @@
-﻿using currentlyConverter.Nbp;
+﻿using currencyConverter.Nbp;
 using System;
 
-namespace currentlyConverter
+namespace currencyConverter
 {
     class Calculator
     {

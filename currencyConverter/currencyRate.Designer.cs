@@ -1,4 +1,4 @@
-﻿namespace currentlyConverter
+﻿namespace currencyConverter
 {
     partial class currencyRate
     {

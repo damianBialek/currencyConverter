@@ -7,11 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using currentlyConverter.Http;
-using System.IO;
-using currentlyConverter.Nbp;
+using currencyConverter.Nbp;
 
-namespace currentlyConverter
+namespace currencyConverter
 {
     public partial class Form1 : Form
     {

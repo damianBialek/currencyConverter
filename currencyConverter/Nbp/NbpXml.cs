@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace currentlyConverter.Nbp
+namespace currencyConverter.Nbp
 {
     [XmlRoot(ElementName = "ExchangeRatesSeries")]
     public class NbpXml

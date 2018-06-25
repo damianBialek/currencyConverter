@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.IO;
 using System.Windows.Forms;
 
-namespace currentlyConverter.Http
+namespace currencyConverter.Http
 {
     class HttpRequest
     {

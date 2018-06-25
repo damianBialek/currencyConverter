@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using currentlyConverter.Nbp;
+using currencyConverter.Nbp;
 
-namespace currentlyConverter
+namespace currencyConverter
 {
     public partial class exchangeRates : Form
     {

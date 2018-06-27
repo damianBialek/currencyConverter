@@ -39,6 +39,7 @@
             this.convertedValueLabel = new System.Windows.Forms.Label();
             this.openAllRatesButton = new System.Windows.Forms.Button();
             this.exchangeRatesPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.exchangeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // fromCurrentylComboBox
@@ -54,7 +55,7 @@
             // 
             this.toCurrentlyComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.toCurrentlyComboBox.FormattingEnabled = true;
-            this.toCurrentlyComboBox.Location = new System.Drawing.Point(28, 145);
+            this.toCurrentlyComboBox.Location = new System.Drawing.Point(27, 182);
             this.toCurrentlyComboBox.Name = "toCurrentlyComboBox";
             this.toCurrentlyComboBox.Size = new System.Drawing.Size(121, 24);
             this.toCurrentlyComboBox.TabIndex = 1;
@@ -70,7 +71,7 @@
             // convertButton
             // 
             this.convertButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.convertButton.Location = new System.Drawing.Point(28, 186);
+            this.convertButton.Location = new System.Drawing.Point(27, 223);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(121, 30);
             this.convertButton.TabIndex = 3;
@@ -102,7 +103,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(79, 122);
+            this.label3.Location = new System.Drawing.Point(78, 159);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(27, 20);
             this.label3.TabIndex = 7;
@@ -112,7 +113,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(65, 227);
+            this.label4.Location = new System.Drawing.Point(64, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 20);
             this.label4.TabIndex = 8;
@@ -121,7 +122,7 @@
             // convertedValueLabel
             // 
             this.convertedValueLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.convertedValueLabel.Location = new System.Drawing.Point(12, 254);
+            this.convertedValueLabel.Location = new System.Drawing.Point(11, 291);
             this.convertedValueLabel.Name = "convertedValueLabel";
             this.convertedValueLabel.Size = new System.Drawing.Size(155, 23);
             this.convertedValueLabel.TabIndex = 9;
@@ -145,12 +146,24 @@
             this.exchangeRatesPanel.Size = new System.Drawing.Size(75, 100);
             this.exchangeRatesPanel.TabIndex = 11;
             // 
+            // exchangeButton
+            // 
+            this.exchangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.exchangeButton.Location = new System.Drawing.Point(69, 119);
+            this.exchangeButton.Name = "exchangeButton";
+            this.exchangeButton.Size = new System.Drawing.Size(43, 37);
+            this.exchangeButton.TabIndex = 12;
+            this.exchangeButton.Text = "↓↑";
+            this.exchangeButton.UseVisualStyleBackColor = true;
+            this.exchangeButton.Click += new System.EventHandler(this.exchangeButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(330, 289);
+            this.ClientSize = new System.Drawing.Size(330, 323);
+            this.Controls.Add(this.exchangeButton);
             this.Controls.Add(this.exchangeRatesPanel);
             this.Controls.Add(this.openAllRatesButton);
             this.Controls.Add(this.convertedValueLabel);
@@ -182,6 +195,7 @@
         private System.Windows.Forms.Label convertedValueLabel;
         private System.Windows.Forms.Button openAllRatesButton;
         private System.Windows.Forms.FlowLayoutPanel exchangeRatesPanel;
+        private System.Windows.Forms.Button exchangeButton;
     }
 }
 

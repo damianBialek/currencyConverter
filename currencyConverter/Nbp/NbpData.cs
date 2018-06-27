@@ -31,7 +31,11 @@ namespace currencyConverter.Nbp
 
             string url = this.buildUrl();
 
+            Console.WriteLine(url);
+
             Stream responseFromServer = HttpRequest.httpRequest(url);
+
+            Console.WriteLine("test");
 
             XmlSerializer xml = new XmlSerializer(typeof(NbpTables));
 

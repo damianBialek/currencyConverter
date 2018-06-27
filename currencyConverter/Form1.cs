@@ -111,5 +111,13 @@ namespace currencyConverter
                 this.openAllRatesButton.Text = "Show Rates";
             }
         }
+
+        private void exchangeButton_Click(object sender, EventArgs e)
+        {
+            NbpTableRate fromRateTmp = (NbpTableRate)this.fromCurrentylComboBox.SelectedItem;
+
+            this.fromCurrentylComboBox.SelectedItem = this.toCurrentlyComboBox.SelectedItem;
+            this.toCurrentlyComboBox.SelectedItem = fromRateTmp;
+        }
     }
 }

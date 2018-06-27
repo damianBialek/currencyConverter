@@ -1,16 +1,16 @@
-﻿namespace currencyConverter
+﻿namespace currencyConverter.Controls
 {
-    partial class exchangeRates
+    partial class exchangeRatesControl
     {
-        /// <summary>
-        /// Required designer variable.
+        /// <summary> 
+        /// Wymagana zmienna projektanta.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
+        /// <summary> 
+        /// Wyczyść wszystkie używane zasoby.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">prawda, jeżeli zarządzane zasoby powinny zostać zlikwidowane; Fałsz w przeciwnym wypadku.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        #region Kod wygenerowany przez Projektanta składników
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// <summary> 
+        /// Metoda wymagana do obsługi projektanta — nie należy modyfikować 
+        /// jej zawartości w edytorze kodu.
         /// </summary>
         private void InitializeComponent()
         {
@@ -34,21 +34,19 @@
             // exchangeRatesPanel
             // 
             this.exchangeRatesPanel.AutoScroll = true;
-            this.exchangeRatesPanel.Location = new System.Drawing.Point(0, 0);
+            this.exchangeRatesPanel.Location = new System.Drawing.Point(3, 3);
             this.exchangeRatesPanel.Name = "exchangeRatesPanel";
-            this.exchangeRatesPanel.Size = new System.Drawing.Size(212, 486);
+            this.exchangeRatesPanel.Size = new System.Drawing.Size(240, 580);
             this.exchangeRatesPanel.TabIndex = 0;
             // 
-            // exchangeRates
+            // exchangeRatesControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(222, 483);
+            this.AutoScroll = true;
             this.Controls.Add(this.exchangeRatesPanel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "exchangeRates";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "exchangeRates";
+            this.Name = "exchangeRatesControl";
+            this.Size = new System.Drawing.Size(246, 585);
             this.ResumeLayout(false);
 
         }

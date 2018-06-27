@@ -15,6 +15,8 @@ namespace currencyConverter
     {
         NbpData nbp;
         List<NbpTableRates> nbpRates;
+        Size originalFormSize;
+        bool exchangeRatesPanelVisible = false;
 
         public Form1()
         {
@@ -25,6 +27,8 @@ namespace currencyConverter
             this.addPlnToRates();
 
             this.completeComboBoxes();
+
+            this.originalFormSize = this.Size;
         }
 
         public void addPlnToRates()
@@ -88,19 +92,24 @@ namespace currencyConverter
 
         private void openAllRatesButton_Click(object sender, EventArgs e)
         {
-            exchangeRates form = new exchangeRates();
-            form.nbpRates = this.nbpRates;
-            form.renderRates();
-            form.Show(this);
+            if (!exchangeRatesPanelVisible)
+            {
+                currencyConverter.Controls.exchangeRatesControl control = new currencyConverter.Controls.exchangeRatesControl();
+                control.nbpRates = this.nbpRates;
+                control.renderRates();
+                this.exchangeRatesPanel.Controls.Add(control);
+                this.exchangeRatesPanelVisible = true;
 
-            form.FormClosed += new FormClosedEventHandler(this.activateButton);
+                this.openAllRatesButton.Text = "Hide Rates";
+            }
+            else
+            {
+                this.exchangeRatesPanelVisible = false;
+                this.exchangeRatesPanel.Controls.Clear();
+                this.Size = this.originalFormSize;
 
-            this.openAllRatesButton.Visible = false;
-        }
-
-        private void activateButton(object sender, FormClosedEventArgs e)
-        {
-            this.openAllRatesButton.Visible = true;
+                this.openAllRatesButton.Text = "Show Rates";
+            }
         }
     }
 }

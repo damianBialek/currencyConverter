@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.convertedValueLabel = new System.Windows.Forms.Label();
             this.openAllRatesButton = new System.Windows.Forms.Button();
+            this.exchangeRatesPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // fromCurrentylComboBox
@@ -132,15 +133,25 @@
             this.openAllRatesButton.Name = "openAllRatesButton";
             this.openAllRatesButton.Size = new System.Drawing.Size(75, 23);
             this.openAllRatesButton.TabIndex = 10;
-            this.openAllRatesButton.Text = "Rates";
+            this.openAllRatesButton.Text = "Show Rates";
             this.openAllRatesButton.UseVisualStyleBackColor = true;
             this.openAllRatesButton.Click += new System.EventHandler(this.openAllRatesButton_Click);
+            // 
+            // exchangeRatesPanel
+            // 
+            this.exchangeRatesPanel.AutoSize = true;
+            this.exchangeRatesPanel.Location = new System.Drawing.Point(252, 13);
+            this.exchangeRatesPanel.Name = "exchangeRatesPanel";
+            this.exchangeRatesPanel.Size = new System.Drawing.Size(75, 100);
+            this.exchangeRatesPanel.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 289);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(330, 289);
+            this.Controls.Add(this.exchangeRatesPanel);
             this.Controls.Add(this.openAllRatesButton);
             this.Controls.Add(this.convertedValueLabel);
             this.Controls.Add(this.label4);
@@ -170,6 +181,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label convertedValueLabel;
         private System.Windows.Forms.Button openAllRatesButton;
+        private System.Windows.Forms.FlowLayoutPanel exchangeRatesPanel;
     }
 }
 

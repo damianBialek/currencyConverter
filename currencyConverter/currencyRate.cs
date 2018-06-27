@@ -15,7 +15,7 @@ namespace currencyConverter
         string code;
         double rate;
 
-        public currencyRate(string code, double rate)
+        public currencyRate(string code, double rate, string name)
         {
             InitializeComponent();
 
@@ -24,6 +24,8 @@ namespace currencyConverter
 
             this.currencyCodeLabel.Text = this.code;
             this.currencyRateLabel.Text = this.rate.ToString();
+            this.toolTip1.SetToolTip(this.currencyCodeLabel, name);
+            this.toolTip1.InitialDelay = 500;
         }
     }
 }

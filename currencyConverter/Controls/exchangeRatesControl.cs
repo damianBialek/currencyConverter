@@ -1,32 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using currencyConverter.Nbp;
 
-namespace currencyConverter
+namespace currencyConverter.Controls
 {
-    public partial class exchangeRates : Form
+    public partial class exchangeRatesControl : UserControl
     {
         public List<NbpTableRates> nbpRates;
 
-        public exchangeRates()
+        public exchangeRatesControl()
         {
             InitializeComponent();
-
-            this.Dock = DockStyle.Left;
         }
 
         public void renderRates()
         {
             foreach (NbpTableRate rate in this.nbpRates)
             {
-                currencyRate control = new currencyRate(rate.Code, rate.Mid);
+                currencyRate control = new currencyRate(rate.Code, rate.Mid, rate.Currency);
                 exchangeRatesPanel.Controls.Add(control);
             }
         }
